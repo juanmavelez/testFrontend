@@ -1,0 +1,23 @@
+<main>
+  <header>
+    <button>
+      <img src="assets/images/arrow_back_ios_black_24dp.svg" alt="">
+    </button>
+    <h2>STATIONS</h2>
+    <button><img src="assets/images/power_settings_new_black_24dp.svg" alt=""></button>
+  </header>
+  <section>
+    <ul *ngIf="(radioChanels$ | async) as radioChanels">
+      <li *ngFor="let channel of radioChanels.radios">
+        <app-channel (click)="clickedItem(channel.name)" [channel]="channel" [clickedChannel]="clickedChannel">
+        </app-channel>
+      </li>
+    </ul>
+  </section>
+  <footer>
+    <div *ngIf="clickedChannel">
+      <p class="title">CURRENTLY PLAYING</p>
+      <p class="name">{{clickedChannel}}</p>
+    </div>
+  </footer>
+</main>

@@ -1,0 +1,43 @@
+@import 'src/sass/variables'
+main
+  display: grid
+  grid-template-rows: 80px auto 80px
+  width: min(300px, 80%)
+  height: 500px
+  margin: 50px auto
+  background-color: $color4
+  border-radius: 10px
+  color: $color3
+  box-shadow: 0px 5px 20px 1px #000000c9
+
+  header
+    display: flex
+    justify-content: space-around
+    border-radius: 10px 10px 0 0
+    background-color: $color2
+    text-shadow: 1px 1px 2px #0000006b
+    color: $color1
+
+    img
+      height: 35px
+
+  section
+    overflow: scroll
+    li
+      display: block
+      border-bottom: 1px solid $color3
+      opacity: 80%
+
+  footer
+    display: block
+    width: 100%
+    background-color: $color5
+    border-top: 0.25px solid $color3
+    border-radius: 0 0 10px 10px
+    text-align: center
+    .title
+      margin: 20px 0 0 0
+      color: $color2
+      font-size: 1.2rem
+    .name
+      margin: 0
