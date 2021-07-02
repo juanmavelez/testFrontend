@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { IResponseRadioServer } from 'src/app/models';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,7 @@ export class RadioServereService {
     this.serverUrl = 'https://teclead.de/recruiting/radios';
   }
 
-  getAllRadios(): any {
-    return this.http.get<any>(this.serverUrl);
+  getAllRadios(): Observable<IResponseRadioServer> {
+    return this.http.get<IResponseRadioServer>(this.serverUrl);
   }
 }
